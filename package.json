@@ -1,6 +1,7 @@
 {
   "name": "matts-menial-services",
   "version": "0.1.0",
+  "homepage": "https://matthewmarkose.github.io/MattsMenialServices/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

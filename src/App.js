@@ -13,7 +13,7 @@ const App = ()=>{
             redirect: "follow"
         };
 
-        fetch("http://localhost:8080/user", requestOptions)
+        fetch("https://menialservices.uw.r.appspot.com/user", requestOptions)
             .then((response) => response.text())
             .then((result) => console.log(result))
             .catch((error) => console.error(error));

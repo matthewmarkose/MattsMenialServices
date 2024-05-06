@@ -2,6 +2,7 @@ import './App.css';
 import {useEffect, useState} from "react";
 import googleOneTap from "google-one-tap";
 import Topbar from "./Topbar";
+import Cart from "./Cart";
 
 const App = ()=>{
     const [user, setUser] = useState(null)
@@ -16,7 +17,8 @@ const App = ()=>{
             redirect: "follow"
         };
 
-        fetch("https://menialservices.uw.r.appspot.com/user", requestOptions)
+        // fetch("https://menialservices.uw.r.appspot.com/user", requestOptions)
+        fetch("http://localhost:8080/user", requestOptions)
             .then((response) => response.json())
             .then((result) => {
                 setUser(result)
@@ -48,6 +50,7 @@ const App = ()=>{
           {user && <Topbar firstName={user.firstname} lastName={user.lastname} imageUrl={user.url}   />}
           <h1>Hello</h1>
           <p>Welcome to matts menial services</p>
+          <Cart />
       </div>
   )
 }
